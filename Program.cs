@@ -1,33 +1,24 @@
 ﻿using System;
 
-namespace ex10
+namespace ex1
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            int codigo;
+            float numero;
+            Console.WriteLine("Insira um valor que esteja entre a faixa de 1 a 9: ");
+            numero = Convert.ToSingle(Console.ReadLine());
 
-            Console.WriteLine("Insira um código: ");
-            codigo = Convert.ToInt32(Console.ReadLine());
+            if ((numero < 1) || (numero > 9))
+            {
+                Console.WriteLine("O valor está fora da faixa permitida.");
 
-            if (codigo == 1)
-            {
-                Console.WriteLine("Alimento não perecível");
             }
-            if ((codigo == 2) || (codigo == 3) || (codigo == 4))
+            else
             {
-                Console.WriteLine("Alimento perecível");
+                Console.WriteLine("O valor está na faixa permitida.");
             }
-            if ((codigo == 5) || (codigo == 6))
-            {
-                Console.WriteLine("Vestuário");
-            }
-            if ((codigo == 8) || (codigo == 9) || (codigo == 10) || (codigo == 11) || (codigo == 12) || (codigo == 13) || (codigo == 14) || (codigo == 15))
-            {
-                Console.WriteLine("Higiene Pessoal");
-            }
-            
 
         }
     }
